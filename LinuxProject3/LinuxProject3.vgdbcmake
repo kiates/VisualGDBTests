@@ -42,7 +42,6 @@
       </FileMasks>
       <TransferNewFilesOnly>true</TransferNewFilesOnly>
       <IncludeSubdirectories>true</IncludeSubdirectories>
-      <SelectedDirectories />
       <DeleteDisappearedFiles>true</DeleteDisappearedFiles>
       <ApplyGlobalExclusionList>true</ApplyGlobalExclusionList>
     </MainSourceTransferCommand>
@@ -66,7 +65,6 @@
     <RelativeSourceDirectory />
     <ConfigurationType>DEBUG</ConfigurationType>
     <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
-    <MainCMakeTarget>CMakeUnitTestDemo</MainCMakeTarget>
     <MakeCommandTemplate>
       <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
       <RemoteHost>
@@ -108,51 +106,13 @@
         <BuildAllTargetsInSubdir>false</BuildAllTargetsInSubdir>
         <FoldSingleItemPathLevels>true</FoldSingleItemPathLevels>
       </ProjectItemSettings>
-      <TargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>sum</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <RootVirtualSourceFolder>
-            <Subfolders />
-            <Files />
-          </RootVirtualSourceFolder>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-          <ResourceDirectories />
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>CMakeUnitTestDemo</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Always</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>Library</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-        </CMakeTargetSpecificSettings>
-      </TargetSpecificSettings>
       <DeploymentDirectory>/tmp</DeploymentDirectory>
       <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
-      <ProjectGUID>4d8f562b-6276-4fc8-b164-4e40ffd4c3c0</ProjectGUID>
+      <ProjectGUID>9559e605-3a7f-4a52-bc9c-2245c8d32453</ProjectGUID>
       <VirtualFolders />
       <ConfigurationNameCase>Upper</ConfigurationNameCase>
       <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
       <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
-      <StartupTarget>CMakeUnitTestDemo</StartupTarget>
     </ProjectModeSettings>
   </Build>
   <CustomBuild>
@@ -173,7 +133,6 @@
     <ShowMessageAfterExecuting>true</ShowMessageAfterExecuting>
   </CustomShortcuts>
   <UserDefinedVariables />
-  <ImportedPropertySheets />
   <CodeSense>
     <Enabled>Unknown</Enabled>
     <ExtraSettings>
@@ -186,8 +145,26 @@
       <Enabled>false</Enabled>
     </CodeAnalyzerSettings>
   </CodeSense>
-  <Configurations />
-  <ProgramArgumentsSuggestions />
+  <CommonSettings>
+    <TestFrameworkID>com.sysprogs.unittest.googletest</TestFrameworkID>
+    <TestFrameworkSubdirectory>TestFramework</TestFrameworkSubdirectory>
+    <TestFrameworkSettings>
+      <Entries>
+        <KeyValue>
+          <Key>com.sysprogs.testsettings.timeout</Key>
+          <Value>1800</Value>
+        </KeyValue>
+        <KeyValue>
+          <Key>com.sysprogs.tests.shortnames</Key>
+          <Value>0</Value>
+        </KeyValue>
+        <KeyValue>
+          <Key>com.sysprogs.bspoptions.Build_GoogleMock_sources</Key>
+          <Value>1</Value>
+        </KeyValue>
+      </Entries>
+    </TestFrameworkSettings>
+  </CommonSettings>
   <Debug xsi:type="com.visualgdb.debug.remote">
     <AdditionalStartupCommands />
     <AdditionalGDBSettings>

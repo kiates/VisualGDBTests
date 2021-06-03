@@ -2,3 +2,4 @@ VisualGDBCache/
 CodeDB/
 *.old
 *.user
+.vs/

@@ -3,6 +3,18 @@
 
 cmake_minimum_required(VERSION 2.7)
 project(CMakeUnitTestDemo)
-set(LIBRARIES_FROM_REFERENCES "")
-add_executable(CMakeUnitTestDemo CMakeUnitTestDemo.cpp Sum.cpp Sum.h)
+
+set(LIBRARIES_FROM_REFERENCES Library StaticLibrary)
+
+# Executable
+add_executable(CMakeUnitTestDemo CMakeUnitTestDemo.cpp)
 target_link_libraries(CMakeUnitTestDemo "${LIBRARIES_FROM_REFERENCES}")
+
+# Dynamic library
+add_library(Library SHARED Library.cpp Sum.cpp Sum.h public/PublicHeader.h private/PrivateHeader.h)
+target_compile_definitions(Library INTERFACE USING_CMAKE_LIBRARY_DEMO)
+target_include_directories(Library PUBLIC public)
+target_include_directories(Library PRIVATE private)
+
+# Static Library
+add_library(StaticLibrary STATIC static-sum.cpp static-sum.h)

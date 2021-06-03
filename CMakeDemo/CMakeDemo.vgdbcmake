@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <VisualGDBProjectSettings2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ConfigurationName>Debug</ConfigurationName>
   <Project xsi:type="com.visualgdb.project.linux">
     <CustomSourceDirectories>
       <Directories />
@@ -66,7 +65,7 @@
     <RelativeSourceDirectory />
     <ConfigurationType>DEBUG</ConfigurationType>
     <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
-    <MainCMakeTarget>CMakeUnitTestDemo</MainCMakeTarget>
+    <MainCMakeTarget>CMakeDemo</MainCMakeTarget>
     <MakeCommandTemplate>
       <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
       <RemoteHost>
@@ -110,31 +109,6 @@
       </ProjectItemSettings>
       <TargetSpecificSettings>
         <CMakeTargetSpecificSettings>
-          <TargetID>sum</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <RootVirtualSourceFolder>
-            <Subfolders />
-            <Files />
-          </RootVirtualSourceFolder>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-          <ResourceDirectories />
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>CMakeUnitTestDemo</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Always</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
           <TargetID>Library</TargetID>
           <Debug />
           <Deployment>
@@ -147,12 +121,12 @@
       </TargetSpecificSettings>
       <DeploymentDirectory>/tmp</DeploymentDirectory>
       <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
-      <ProjectGUID>4d8f562b-6276-4fc8-b164-4e40ffd4c3c0</ProjectGUID>
+      <ProjectGUID>fca75456-2a94-4a65-ba4a-597a0c466a62</ProjectGUID>
       <VirtualFolders />
       <ConfigurationNameCase>Upper</ConfigurationNameCase>
       <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
       <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
-      <StartupTarget>CMakeUnitTestDemo</StartupTarget>
+      <StartupTarget>CMakeDemo</StartupTarget>
     </ProjectModeSettings>
   </Build>
   <CustomBuild>
