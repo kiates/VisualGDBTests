@@ -3,7 +3,11 @@
 
 cmake_minimum_required(VERSION 2.7)
 project(CMakeDemo)
-set(LIBRARIES_FROM_REFERENCES Library)
+
+set(LIBRARIES_FROM_REFERENCES Library ExternalProjectLibrary)
+
 add_executable(CMakeDemo CMakeDemo.cpp)
 target_link_libraries(CMakeDemo "${LIBRARIES_FROM_REFERENCES}")
+
 add_subdirectory(../CMakeUnitTestDemo CMakeUnitTestDemo)
+add_subdirectory(../ExternalProject ExternalProject)

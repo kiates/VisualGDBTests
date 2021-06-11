@@ -3,6 +3,18 @@
 
 cmake_minimum_required(VERSION 2.7)
 project(ExternalProject)
+
 set(LIBRARIES_FROM_REFERENCES "")
-add_library(ExternalProjectLibrary SHARED ExternalProjectLibrary.cpp ExternalProjectLibrary.h)
+
+add_library(ExternalProjectLibrary SHARED ExternalProjectLibrary.cpp private/PrivateHeader.h public/ExternalProjectLibrary.h)
+set(INSTALL_CMAKE_DIR /tmp/CMakePackages/ExternalProjectLibrary)
+target_link_libraries(ExternalProjectLibrary PUBLIC)
+target_include_directories(ExternalProjectLibrary PUBLIC
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/public>
+	$<INSTALL_INTERFACE:${INSTALL_CMAKE_DIR}/public>)
+target_include_directories(ExternalProjectLibrary PRIVATE private)
 target_link_libraries(ExternalProjectLibrary "${LIBRARIES_FROM_REFERENCES}")
+
+install(FILES public/ExternalProjectLibrary.h DESTINATION ${INSTALL_CMAKE_DIR}/public)
+install(TARGETS ExternalProjectLibrary DESTINATION ${INSTALL_CMAKE_DIR} EXPORT FindExternalProjectLibrary)
+install(EXPORT FindExternalProjectLibrary DESTINATION ${INSTALL_CMAKE_DIR})

@@ -15,6 +15,10 @@ Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "CMakeDemo", "CMakeDemo\CMak
 EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "ExternalProject", "ExternalProject\ExternalProject.vgdbcmake", "{26288917-C146-4065-B8D8-DC228DE3B791}"
 EndProject
+Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "UsesExternalProjectLibrary", "UsesExternalProjectLibrary\UsesExternalProjectLibrary.vgdbcmake", "{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibraryExample", "ExternalLibraryExample", "{370230FA-CDC7-450F-B619-81E72D96E48F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|VisualGDB = Debug|VisualGDB
@@ -71,9 +75,21 @@ Global
 		{26288917-C146-4065-B8D8-DC228DE3B791}.Release|VisualGDB.Build.0 = Release|VisualGDB
 		{26288917-C146-4065-B8D8-DC228DE3B791}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
 		{26288917-C146-4065-B8D8-DC228DE3B791}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.Release|VisualGDB.Build.0 = Release|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26288917-C146-4065-B8D8-DC228DE3B791} = {370230FA-CDC7-450F-B619-81E72D96E48F}
+		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5} = {370230FA-CDC7-450F-B619-81E72D96E48F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6441D889-3477-4AF7-A47A-88E530B06304}
