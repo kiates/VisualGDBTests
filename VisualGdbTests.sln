@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1525
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "CMakeUnitTestDemo", "CMakeUnitTestDemo\CMakeUnitTestDemo.vgdbcmake", "{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}"
-EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "CMakeDemo", "CMakeDemo\CMakeDemo.vgdbcmake", "{FCA75456-2A94-4A65-BA4A-597A0C466A62}"
 EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "ExternalProject", "ExternalProject\ExternalProject.vgdbcmake", "{26288917-C146-4065-B8D8-DC228DE3B791}"
@@ -12,6 +10,8 @@ EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "UsesExternalProjectLibrary", "UsesExternalProjectLibrary\UsesExternalProjectLibrary.vgdbcmake", "{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibraryExample", "ExternalLibraryExample", "{370230FA-CDC7-450F-B619-81E72D96E48F}"
+EndProject
+Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "ExampleProject", "ExampleProject\ExampleProject.vgdbcmake", "{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +21,6 @@ Global
 		RelWithDebInfo|VisualGDB = RelWithDebInfo|VisualGDB
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Release|VisualGDB.Build.0 = Release|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
-		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
 		{FCA75456-2A94-4A65-BA4A-597A0C466A62}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
 		{FCA75456-2A94-4A65-BA4A-597A0C466A62}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
 		{FCA75456-2A94-4A65-BA4A-597A0C466A62}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
@@ -53,6 +45,14 @@ Global
 		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.Release|VisualGDB.Build.0 = Release|VisualGDB
 		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
 		{BCD1BD74-D57F-4D73-80B6-7396BE8614D5}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Release|VisualGDB.Build.0 = Release|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
+		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
