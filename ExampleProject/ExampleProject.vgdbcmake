@@ -89,6 +89,9 @@
     <UpdateSourcesInCMakeFile>true</UpdateSourcesInCMakeFile>
     <ExportCompileCommands>false</ExportCompileCommands>
     <DisableToolchainFile>false</DisableToolchainFile>
+    <ExtraConfigurationVariables>
+      <string>CMAKE_STAGING_PREFIX=/home/chadya/rtac_sdk/tmp/sysroots/x86_64/usr/local</string>
+    </ExtraConfigurationVariables>
     <CMakeMakefileType>Ninja</CMakeMakefileType>
     <DeployAsRoot>false</DeployAsRoot>
     <CMakeCleanMode>RemoveBuildDirectory</CMakeCleanMode>

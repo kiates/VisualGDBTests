@@ -10,16 +10,44 @@ project(ExampleProject)
 set(LIBRARIES_FROM_REFERENCES ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
 
 # Executable
-add_executable(ExampleProjectExecutable ExampleProjectExecutable.cpp)
+add_executable(ExampleProjectExecutable src/ExampleProjectExecutable.cpp)
+target_compile_features(ExampleProjectExecutable PRIVATE cxx_std_11)
+target_compile_options(ExampleProjectExecutable PRIVATE -Werror)
+target_include_directories(ExampleProjectExecutable PRIVATE include/ExampleProject)
 target_link_libraries(ExampleProjectExecutable "${LIBRARIES_FROM_REFERENCES}")
 
 # Dynamic library
-add_library(ExampleProjectSharedLibrary SHARED ExampleProjectSharedLibrary.cpp public/ExampleProjectSharedLibrary.h private/PrivateHeader.h)
-target_compile_definitions(ExampleProjectSharedLibrary INTERFACE USING_CMAKE_LIBRARY_DEMO)
-target_include_directories(ExampleProjectSharedLibrary PUBLIC public)
-target_include_directories(ExampleProjectSharedLibrary PRIVATE private)
+add_library(ExampleProjectSharedLibrary SHARED src/ExampleProjectSharedLibrary.cpp include/ExampleProject/ExampleProjectSharedLibrary.h src/PrivateHeader.h)
+#target_compile_definitions(ExampleProjectSharedLibrary INTERFACE USING_CMAKE_LIBRARY_DEMO)
+target_include_directories(ExampleProjectSharedLibrary
+	PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/ExampleProject>
+		$<INSTALL_INTERFACE:include>
+	PRIVATE
+		${CMAKE_CURRENT_SOURCE_DIR}/src
+)
+#target_include_directories(ExampleProjectSharedLibrary PRIVATE include/ExampleProject src)
 
 # Static Library
-add_library(ExampleProjectStaticLibrary STATIC ExampleProjectStaticLibrary.cpp ExampleProjectStaticLibrary.h)
+add_library(ExampleProjectStaticLibrary STATIC src/ExampleProjectStaticLibrary.cpp include/ExampleProject/ExampleProjectStaticLibrary.h)
+target_include_directories(ExampleProjectStaticLibrary
+	PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/ExampleProject>
+		$<INSTALL_INTERFACE:include>
+	PRIVATE
+		include/ExampleProject
+)
+
+# Install and Export for use by downstream projects.
+include(GNUInstallDirs)
+install(TARGETS ExampleProjectSharedLibrary ExampleProjectStaticLibrary
+	EXPORT FindExternalProjectLibrary
+	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+install(EXPORT FindExternalProjectLibrary
+	NAMESPACE ExampleProject::
+	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ExampleProject
+)
 
 add_subdirectory(test)
