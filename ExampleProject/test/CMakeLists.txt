@@ -6,6 +6,7 @@ project(ExampleProjectUnitTest)
 
 find_test_framework()
 
-set(LIBRARIES_FROM_REFERENCES TESTFW ExampleProjectSharedLibrary)
+set(LIBRARIES_FROM_REFERENCES TESTFW ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
 add_executable(ExampleProjectUnitTests DemoUnitTest.cpp Main.cpp SharedLibraryUnitTest.cpp StaticLibraryUnitTest.cpp)
+target_include_directories(ExampleProjectUnitTests PRIVATE ..)
 target_link_libraries(ExampleProjectUnitTests "${LIBRARIES_FROM_REFERENCES}")
