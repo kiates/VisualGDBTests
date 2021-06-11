@@ -5,7 +5,7 @@
 # internal (non-exported) static and shared library.
 
 cmake_minimum_required(VERSION 2.7)
-project(CMakeUnitTestDemo)
+project(ExampleProject)
 
 set(LIBRARIES_FROM_REFERENCES ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
 

@@ -5,12 +5,6 @@ VisualStudioVersion = 15.0.28307.1525
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "CMakeUnitTestDemo", "CMakeUnitTestDemo\CMakeUnitTestDemo.vgdbcmake", "{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}"
 EndProject
-Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "LinuxProject2", "LinuxProject2\LinuxProject2.vgdbcmake", "{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}"
-EndProject
-Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "LinuxProject3", "LinuxProject3\LinuxProject3.vgdbcmake", "{9559E605-3A7F-4A52-BC9C-2245C8D32453}"
-EndProject
-Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "LinuxProject4", "LinuxProject4\LinuxProject4.vgdbcmake", "{08E82057-8877-4B92-B612-3AB947F90CCE}"
-EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "CMakeDemo", "CMakeDemo\CMakeDemo.vgdbcmake", "{FCA75456-2A94-4A65-BA4A-597A0C466A62}"
 EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "ExternalProject", "ExternalProject\ExternalProject.vgdbcmake", "{26288917-C146-4065-B8D8-DC228DE3B791}"
@@ -35,30 +29,6 @@ Global
 		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Release|VisualGDB.Build.0 = Release|VisualGDB
 		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
 		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.Release|VisualGDB.Build.0 = Release|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
-		{4FB4F381-C804-4EE8-8364-08CEEDF11AF8}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.Release|VisualGDB.Build.0 = Release|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
-		{9559E605-3A7F-4A52-BC9C-2245C8D32453}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.Release|VisualGDB.Build.0 = Release|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
-		{08E82057-8877-4B92-B612-3AB947F90CCE}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
 		{FCA75456-2A94-4A65-BA4A-597A0C466A62}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
 		{FCA75456-2A94-4A65-BA4A-597A0C466A62}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
 		{FCA75456-2A94-4A65-BA4A-597A0C466A62}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
