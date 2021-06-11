@@ -2,4 +2,4 @@
 
 void PublicFunction();
 
-int DynamicSum(int a, int b);
+int SharedSum(int a, int b);

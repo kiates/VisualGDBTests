@@ -65,7 +65,7 @@
     <RelativeSourceDirectory />
     <ConfigurationType>DEBUG</ConfigurationType>
     <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
-    <MainCMakeTarget>ExampleProjectUnitTests</MainCMakeTarget>
+    <MainCMakeTarget>UsesExampleProject</MainCMakeTarget>
     <MakeCommandTemplate>
       <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
       <RemoteHost>
@@ -89,16 +89,16 @@
     <UpdateSourcesInCMakeFile>true</UpdateSourcesInCMakeFile>
     <ExportCompileCommands>false</ExportCompileCommands>
     <DisableToolchainFile>false</DisableToolchainFile>
-    <ExtraConfigurationVariables>
-      <string>CMAKE_STAGING_PREFIX=/home/chadya/rtac_sdk/tmp/sysroots/x86/usr/local</string>
-    </ExtraConfigurationVariables>
+    <ExtraModuleDirectories>
+      <string>/home/chadya/rtac_sdk/tmp/sysroots/x86/usr/local/lib/cmake/ExampleProject</string>
+    </ExtraModuleDirectories>
     <CMakeMakefileType>Ninja</CMakeMakefileType>
     <DeployAsRoot>false</DeployAsRoot>
     <CMakeCleanMode>RemoveBuildDirectory</CMakeCleanMode>
     <UseCCache>false</UseCCache>
     <ProjectModeSettings>
       <ProjectItemSettings>
-        <GroupSourcesByTypes>false</GroupSourcesByTypes>
+        <GroupSourcesByTypes>true</GroupSourcesByTypes>
         <GroupSourcesByPaths>true</GroupSourcesByPaths>
         <GroupTargetsByPaths>true</GroupTargetsByPaths>
         <FollowCMakeSourceGroups>false</FollowCMakeSourceGroups>
@@ -110,63 +110,15 @@
         <BuildAllTargetsInSubdir>false</BuildAllTargetsInSubdir>
         <FoldSingleItemPathLevels>true</FoldSingleItemPathLevels>
       </ProjectItemSettings>
-      <TargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>sum</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <RootVirtualSourceFolder>
-            <Subfolders />
-            <Files />
-          </RootVirtualSourceFolder>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-          <ResourceDirectories />
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>CMakeUnitTestDemo</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Always</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-          <ResourceDirectories />
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>Library</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-          <ResourceDirectories />
-        </CMakeTargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>ExampleProjectSharedLibrary</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-        </CMakeTargetSpecificSettings>
-      </TargetSpecificSettings>
+      <TargetSpecificSettings />
       <DeploymentDirectory>/tmp</DeploymentDirectory>
       <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
-      <ProjectGUID>4d8f562b-6276-4fc8-b164-4e40ffd4c3c0</ProjectGUID>
+      <ProjectGUID>fe32562b-3b27-4e52-943e-7f54a1323c34</ProjectGUID>
       <VirtualFolders />
       <ConfigurationNameCase>Upper</ConfigurationNameCase>
       <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
       <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
-      <StartupTarget>ExampleProjectUnitTests</StartupTarget>
+      <StartupTarget>UsesExampleProject</StartupTarget>
     </ProjectModeSettings>
   </Build>
   <CustomBuild>
@@ -201,13 +153,6 @@
     </CodeAnalyzerSettings>
   </CodeSense>
   <Configurations />
-  <CommonSettings>
-    <TestFrameworkID>com.sysprogs.unittest.googletest</TestFrameworkID>
-    <TestFrameworkSubdirectory>TestFramework</TestFrameworkSubdirectory>
-    <TestFrameworkSettings>
-      <Entries />
-    </TestFrameworkSettings>
-  </CommonSettings>
   <ProgramArgumentsSuggestions />
   <Debug xsi:type="com.visualgdb.debug.remote">
     <AdditionalStartupCommands />

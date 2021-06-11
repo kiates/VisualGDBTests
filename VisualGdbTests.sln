@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibraryExample", "E
 EndProject
 Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "ExampleProject", "ExampleProject\ExampleProject.vgdbcmake", "{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}"
 EndProject
+Project("{803FD0C6-D64E-4E16-9DC3-1DAEC859A3D2}") = "UsesExampleProject", "UsesExampleProject\UsesExampleProject.vgdbcmake", "{FE32562B-3B27-4E52-943E-7F54A1323C34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|VisualGDB = Debug|VisualGDB
@@ -53,6 +55,14 @@ Global
 		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.Release|VisualGDB.Build.0 = Release|VisualGDB
 		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
 		{4D8F562B-6276-4FC8-B164-4E40FFD4C3C0}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.MinSizeRel|VisualGDB.ActiveCfg = MinSizeRel|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.MinSizeRel|VisualGDB.Build.0 = MinSizeRel|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.Release|VisualGDB.Build.0 = Release|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.RelWithDebInfo|VisualGDB.ActiveCfg = RelWithDebInfo|VisualGDB
+		{FE32562B-3B27-4E52-943E-7F54A1323C34}.RelWithDebInfo|VisualGDB.Build.0 = RelWithDebInfo|VisualGDB
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

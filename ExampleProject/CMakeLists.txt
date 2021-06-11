@@ -4,7 +4,7 @@
 # This project contains an executable unit test using googletest as well as an
 # internal (non-exported) static and shared library.
 
-cmake_minimum_required(VERSION 2.7)
+cmake_minimum_required(VERSION 3.10)
 project(ExampleProject)
 
 set(LIBRARIES_FROM_REFERENCES ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
@@ -27,6 +27,10 @@ target_include_directories(ExampleProjectSharedLibrary
 		${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 #target_include_directories(ExampleProjectSharedLibrary PRIVATE include/ExampleProject src)
+set_target_properties(ExampleProjectSharedLibrary PROPERTIES
+	PUBLIC_HEADER include/ExampleProject/ExampleProjectSharedLibrary.h
+	#PRIVATE_HEADER src/PrivateHeader.h
+)
 
 # Static Library
 add_library(ExampleProjectStaticLibrary STATIC src/ExampleProjectStaticLibrary.cpp include/ExampleProject/ExampleProjectStaticLibrary.h)
@@ -37,15 +41,20 @@ target_include_directories(ExampleProjectStaticLibrary
 	PRIVATE
 		include/ExampleProject
 )
+set_target_properties(ExampleProjectStaticLibrary PROPERTIES
+	PUBLIC_HEADER include/ExampleProject/ExampleProjectStaticLibrary.h
+)
 
 # Install and Export for use by downstream projects.
 include(GNUInstallDirs)
-install(TARGETS ExampleProjectSharedLibrary ExampleProjectStaticLibrary
-	EXPORT FindExternalProjectLibrary
+install(TARGETS ExampleProjectSharedLibrary ExampleProjectStaticLibrary ExampleProjectExecutable
+	EXPORT FindExampleProject
+	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ExampleProject
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
-install(EXPORT FindExternalProjectLibrary
+install(EXPORT FindExampleProject
 	NAMESPACE ExampleProject::
 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ExampleProject
 )

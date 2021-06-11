@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	int result = StaticSum(1, 2);
 
 	// From a dynamic library.
-	cout << DynamicSum(1, 2) << endl;
+	cout << SharedSum(1, 2) << endl;
 	
 	// From a dynamic library.
 	PublicFunction();
