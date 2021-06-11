@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <stdio.h>
 
-TEST(StaticLibraryFixture, Test1)
+TEST(SharedLibraryFixture, Test1)
 {
 	EXPECT_EQ(1, 1);
 }

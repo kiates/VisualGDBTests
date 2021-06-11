@@ -5,6 +5,7 @@
 cmake_minimum_required(VERSION 2.7)
 project(CMakeDemo)
 
+find_test_framework()
 set(LIBRARIES_FROM_REFERENCES Library ExternalProjectLibrary)
 
 add_executable(CMakeDemo CMakeDemo.cpp)

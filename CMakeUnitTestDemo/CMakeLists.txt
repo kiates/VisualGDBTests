@@ -7,19 +7,19 @@
 cmake_minimum_required(VERSION 2.7)
 project(CMakeUnitTestDemo)
 
-set(LIBRARIES_FROM_REFERENCES SharedLibrary StaticLibrary)
+set(LIBRARIES_FROM_REFERENCES ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
 
 # Executable
-add_executable(CMakeExampleExecutable CMakeUnitTestDemo.cpp)
-target_link_libraries(CMakeExampleExecutable "${LIBRARIES_FROM_REFERENCES}")
+add_executable(ExampleProjectExecutable CMakeUnitTestDemo.cpp)
+target_link_libraries(ExampleProjectExecutable "${LIBRARIES_FROM_REFERENCES}")
 
 # Dynamic library
-add_library(SharedLibrary SHARED Library.cpp Sum.cpp Sum.h public/PublicHeader.h private/PrivateHeader.h)
-target_compile_definitions(SharedLibrary INTERFACE USING_CMAKE_LIBRARY_DEMO)
-target_include_directories(SharedLibrary PUBLIC public)
-target_include_directories(SharedLibrary PRIVATE private)
+add_library(ExampleProjectSharedLibrary SHARED Library.cpp SharedSum.cpp SharedSum.h public/PublicHeader.h private/PrivateHeader.h)
+target_compile_definitions(ExampleProjectSharedLibrary INTERFACE USING_CMAKE_LIBRARY_DEMO)
+target_include_directories(ExampleProjectSharedLibrary PUBLIC public)
+target_include_directories(ExampleProjectSharedLibrary PRIVATE private)
 
 # Static Library
-add_library(StaticLibrary STATIC static-sum.cpp static-sum.h)
+add_library(ExampleProjectStaticLibrary STATIC StaticSum.cpp StaticSum.h)
 
 add_subdirectory(test)

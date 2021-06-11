@@ -133,6 +133,7 @@
             <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
           </Deployment>
           <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
+          <ResourceDirectories />
         </CMakeTargetSpecificSettings>
       </TargetSpecificSettings>
       <DeploymentDirectory>/tmp</DeploymentDirectory>
@@ -177,6 +178,12 @@
     </CodeAnalyzerSettings>
   </CodeSense>
   <Configurations />
+  <CommonSettings>
+    <TestFrameworkSubdirectory>TestFramework</TestFrameworkSubdirectory>
+    <TestFrameworkSettings>
+      <Entries />
+    </TestFrameworkSettings>
+  </CommonSettings>
   <ProgramArgumentsSuggestions />
   <Debug xsi:type="com.visualgdb.debug.remote">
     <AdditionalStartupCommands />

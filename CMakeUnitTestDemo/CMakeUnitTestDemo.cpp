@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Sum.h"
-#include "static-sum.h"
+#include "SharedSum.h"
+#include "StaticSum.h"
 #include "PublicHeader.h"
 
 #ifndef USING_CMAKE_LIBRARY_DEMO
@@ -12,10 +12,10 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	// From a static library.
-	StaticLibraryFunction();
+	int result = StaticSum(1, 2);
 
 	// From a dynamic library.
-	cout << sum(1, 2) << endl;
+	cout << DynamicSum(1, 2) << endl;
 	
 	// From a dynamic library.
 	PublicFunction();

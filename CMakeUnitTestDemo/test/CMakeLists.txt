@@ -2,8 +2,10 @@
 #Note: VisualGDB will automatically update this file when you add new sources to the project.
 
 cmake_minimum_required(VERSION 2.7)
-project(UnitTest)
+project(ExampleProjectUnitTest)
+
 find_test_framework()
-set(LIBRARIES_FROM_REFERENCES TESTFW SharedLibrary)
-add_executable(UnitTest UnitTest.cpp Main.cpp LibraryUnitTest.cpp StaticLibraryUnitTest.cpp)
-target_link_libraries(UnitTest "${LIBRARIES_FROM_REFERENCES}")
+
+set(LIBRARIES_FROM_REFERENCES TESTFW ExampleProjectSharedLibrary)
+add_executable(ExampleProjectUnitTests DemoUnitTest.cpp Main.cpp SharedLibraryUnitTest.cpp StaticLibraryUnitTest.cpp)
+target_link_libraries(ExampleProjectUnitTests "${LIBRARIES_FROM_REFERENCES}")

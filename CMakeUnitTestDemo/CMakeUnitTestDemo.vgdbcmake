@@ -65,7 +65,7 @@
     <RelativeSourceDirectory />
     <ConfigurationType>DEBUG</ConfigurationType>
     <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
-    <MainCMakeTarget>UnitTest</MainCMakeTarget>
+    <MainCMakeTarget>ExampleProjectUnitTests</MainCMakeTarget>
     <MakeCommandTemplate>
       <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
       <RemoteHost>
@@ -95,7 +95,7 @@
     <UseCCache>false</UseCCache>
     <ProjectModeSettings>
       <ProjectItemSettings>
-        <GroupSourcesByTypes>true</GroupSourcesByTypes>
+        <GroupSourcesByTypes>false</GroupSourcesByTypes>
         <GroupSourcesByPaths>true</GroupSourcesByPaths>
         <GroupTargetsByPaths>true</GroupTargetsByPaths>
         <FollowCMakeSourceGroups>false</FollowCMakeSourceGroups>
@@ -124,10 +124,10 @@
           <ResourceDirectories />
         </CMakeTargetSpecificSettings>
         <CMakeTargetSpecificSettings>
-          <TargetID>Library</TargetID>
+          <TargetID>CMakeUnitTestDemo</TargetID>
           <Debug />
           <Deployment>
-            <Mode>Auto</Mode>
+            <Mode>Always</Mode>
             <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
             <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
           </Deployment>
@@ -135,10 +135,10 @@
           <ResourceDirectories />
         </CMakeTargetSpecificSettings>
         <CMakeTargetSpecificSettings>
-          <TargetID>CMakeUnitTestDemo</TargetID>
+          <TargetID>Library</TargetID>
           <Debug />
           <Deployment>
-            <Mode>Always</Mode>
+            <Mode>Auto</Mode>
             <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
             <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
           </Deployment>
@@ -153,7 +153,7 @@
       <ConfigurationNameCase>Upper</ConfigurationNameCase>
       <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
       <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
-      <StartupTarget>UnitTest</StartupTarget>
+      <StartupTarget>ExampleProjectUnitTests</StartupTarget>
     </ProjectModeSettings>
   </Build>
   <CustomBuild>
