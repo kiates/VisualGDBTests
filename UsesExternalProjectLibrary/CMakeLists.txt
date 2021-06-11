@@ -4,9 +4,11 @@
 cmake_minimum_required(VERSION 2.7)
 project(UsesExternalProjectLibrary)
 
+set(CMAKE_FIND_DEBUG_MODE TRUE)
 find_package(ExternalProjectLibrary REQUIRED)
+set(CMAKE_FIND_DEBUG_MODE FALSE)
 
-set(LIBRARIES_FROM_REFERENCES -L/tmp/CMakePackages/ExternalProjectLibrary -lExternalProjectLibrary)
+set(LIBRARIES_FROM_REFERENCES ExternalProjectLibrary)
 
 add_executable(UsesExternalProjectLibrary UsesExternalProjectLibrary.cpp)
 target_include_directories(UsesExternalProjectLibrary PRIVATE ../ExternalProject/public)

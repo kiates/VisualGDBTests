@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <VisualGDBProjectSettings2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ConfigurationName>Debug</ConfigurationName>
   <Project xsi:type="com.visualgdb.project.linux">
     <CustomSourceDirectories>
       <Directories />
@@ -89,6 +88,9 @@
     <UpdateSourcesInCMakeFile>true</UpdateSourcesInCMakeFile>
     <ExportCompileCommands>false</ExportCompileCommands>
     <DisableToolchainFile>false</DisableToolchainFile>
+    <ExtraConfigurationVariables>
+      <string>CMAKE_STAGING_PREFIX=/home/chadya/rtac_sdk/tmp/sysroots/x86_64/usr/local</string>
+    </ExtraConfigurationVariables>
     <CMakeMakefileType>Ninja</CMakeMakefileType>
     <DeployAsRoot>false</DeployAsRoot>
     <CMakeCleanMode>RemoveBuildDirectory</CMakeCleanMode>

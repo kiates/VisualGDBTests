@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <VisualGDBProjectSettings2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ConfigurationName>Debug</ConfigurationName>
   <Project xsi:type="com.visualgdb.project.linux">
     <CustomSourceDirectories>
       <Directories />
@@ -41,7 +42,6 @@
       </FileMasks>
       <TransferNewFilesOnly>true</TransferNewFilesOnly>
       <IncludeSubdirectories>true</IncludeSubdirectories>
-      <SelectedDirectories />
       <DeleteDisappearedFiles>true</DeleteDisappearedFiles>
       <ApplyGlobalExclusionList>true</ApplyGlobalExclusionList>
     </MainSourceTransferCommand>
@@ -65,7 +65,6 @@
     <RelativeSourceDirectory />
     <ConfigurationType>DEBUG</ConfigurationType>
     <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
-    <MainCMakeTarget>UsesExternalProjectLibrary</MainCMakeTarget>
     <MakeCommandTemplate>
       <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
       <RemoteHost>
@@ -89,9 +88,6 @@
     <UpdateSourcesInCMakeFile>true</UpdateSourcesInCMakeFile>
     <ExportCompileCommands>false</ExportCompileCommands>
     <DisableToolchainFile>false</DisableToolchainFile>
-    <ExtraModuleDirectories>
-      <string>/home/chadya/rtac_sdk/tmp/sysroots/x86_64/usr/local/lib/cmake</string>
-    </ExtraModuleDirectories>
     <CMakeMakefileType>Ninja</CMakeMakefileType>
     <DeployAsRoot>false</DeployAsRoot>
     <CMakeCleanMode>RemoveBuildDirectory</CMakeCleanMode>
@@ -110,27 +106,13 @@
         <BuildAllTargetsInSubdir>false</BuildAllTargetsInSubdir>
         <FoldSingleItemPathLevels>true</FoldSingleItemPathLevels>
       </ProjectItemSettings>
-      <TargetSpecificSettings>
-        <CMakeTargetSpecificSettings>
-          <TargetID>UsesExternalProjectLibrary</TargetID>
-          <Debug />
-          <Deployment>
-            <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
-            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
-          </Deployment>
-          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
-          <ResourceDirectories />
-        </CMakeTargetSpecificSettings>
-      </TargetSpecificSettings>
       <DeploymentDirectory>/tmp</DeploymentDirectory>
       <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
-      <ProjectGUID>bcd1bd74-d57f-4d73-80b6-7396be8614d5</ProjectGUID>
+      <ProjectGUID>fa81ef66-0a44-421a-89c2-372ebf2bf570</ProjectGUID>
       <VirtualFolders />
       <ConfigurationNameCase>Upper</ConfigurationNameCase>
       <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
       <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
-      <StartupTarget>UsesExternalProjectLibrary</StartupTarget>
     </ProjectModeSettings>
   </Build>
   <CustomBuild>
@@ -151,7 +133,6 @@
     <ShowMessageAfterExecuting>true</ShowMessageAfterExecuting>
   </CustomShortcuts>
   <UserDefinedVariables />
-  <ImportedPropertySheets />
   <CodeSense>
     <Enabled>Unknown</Enabled>
     <ExtraSettings>
@@ -164,8 +145,26 @@
       <Enabled>false</Enabled>
     </CodeAnalyzerSettings>
   </CodeSense>
-  <Configurations />
-  <ProgramArgumentsSuggestions />
+  <CommonSettings>
+    <TestFrameworkID>com.sysprogs.unittest.googletest</TestFrameworkID>
+    <TestFrameworkSubdirectory>TestFramework</TestFrameworkSubdirectory>
+    <TestFrameworkSettings>
+      <Entries>
+        <KeyValue>
+          <Key>com.sysprogs.testsettings.timeout</Key>
+          <Value>1800</Value>
+        </KeyValue>
+        <KeyValue>
+          <Key>com.sysprogs.tests.shortnames</Key>
+          <Value>0</Value>
+        </KeyValue>
+        <KeyValue>
+          <Key>com.sysprogs.bspoptions.Build_GoogleMock_sources</Key>
+          <Value>1</Value>
+        </KeyValue>
+      </Entries>
+    </TestFrameworkSettings>
+  </CommonSettings>
   <Debug xsi:type="com.visualgdb.debug.remote">
     <AdditionalStartupCommands />
     <AdditionalGDBSettings>
@@ -213,7 +212,6 @@
     <KeepConsoleAfterExit>false</KeepConsoleAfterExit>
     <RunGDBUnderSudo>false</RunGDBUnderSudo>
     <DeploymentMode>Auto</DeploymentMode>
-    <LdLibraryPath />
     <DeployWhenLaunchedWithoutDebugging>true</DeployWhenLaunchedWithoutDebugging>
     <StripDebugSymbolsDuringDeployment>false</StripDebugSymbolsDuringDeployment>
     <SuppressTTYCreation>false</SuppressTTYCreation>
