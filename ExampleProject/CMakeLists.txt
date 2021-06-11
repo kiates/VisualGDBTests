@@ -10,16 +10,16 @@ project(ExampleProject)
 set(LIBRARIES_FROM_REFERENCES ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
 
 # Executable
-add_executable(ExampleProjectExecutable CMakeUnitTestDemo.cpp)
+add_executable(ExampleProjectExecutable ExampleProjectExecutable.cpp)
 target_link_libraries(ExampleProjectExecutable "${LIBRARIES_FROM_REFERENCES}")
 
 # Dynamic library
-add_library(ExampleProjectSharedLibrary SHARED Library.cpp SharedSum.cpp SharedSum.h public/PublicHeader.h private/PrivateHeader.h)
+add_library(ExampleProjectSharedLibrary SHARED ExampleProjectSharedLibrary.cpp public/ExampleProjectSharedLibrary.h private/PrivateHeader.h)
 target_compile_definitions(ExampleProjectSharedLibrary INTERFACE USING_CMAKE_LIBRARY_DEMO)
 target_include_directories(ExampleProjectSharedLibrary PUBLIC public)
 target_include_directories(ExampleProjectSharedLibrary PRIVATE private)
 
 # Static Library
-add_library(ExampleProjectStaticLibrary STATIC StaticSum.cpp StaticSum.h)
+add_library(ExampleProjectStaticLibrary STATIC ExampleProjectStaticLibrary.cpp ExampleProjectStaticLibrary.h)
 
 add_subdirectory(test)

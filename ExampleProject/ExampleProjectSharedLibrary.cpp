@@ -1,12 +1,13 @@
 #include "PrivateHeader.h"
-#include "PublicHeader.h"
- 
-#ifdef USING_CMAKE_LIBRARY_DEMO
-#error This should not happen
-#endif
+#include "ExampleProjectSharedLibrary.h"
  
 void PublicFunction()
 {
 	printf("Hello from PublicFunction()\n");
 	PrivateFunction();
+}
+
+int DynamicSum(int a, int b)
+{
+	return a + b;
 }

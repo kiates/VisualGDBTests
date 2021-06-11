@@ -1,4 +1,4 @@
-#include "StaticSum.h"
+#include "ExampleProjectStaticLibrary.h"
 
 int StaticSum(int a, int b)
 {

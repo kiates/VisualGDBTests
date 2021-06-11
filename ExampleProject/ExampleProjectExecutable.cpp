@@ -1,11 +1,6 @@
 #include <iostream>
-#include "SharedSum.h"
-#include "StaticSum.h"
-#include "PublicHeader.h"
-
-#ifndef USING_CMAKE_LIBRARY_DEMO
-#error CMakeLibraryDemo is missing
-#endif 
+#include "ExampleProjectSharedLibrary.h"
+#include "ExampleProjectStaticLibrary.h"
 
 using namespace std;
 

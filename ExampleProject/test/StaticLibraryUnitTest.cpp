@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
-#include <stdio.h>
-#include <StaticSum.h>
+#include <ExampleProjectStaticLibrary.h>
 
 TEST(StaticLibraryFixture, StaticSum)
 {
