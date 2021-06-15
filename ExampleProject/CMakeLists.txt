@@ -7,6 +7,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(ExampleProject)
 
+option(EXAMPLEPROJECT_UNITTESTS "Enable Unit Tests" OFF)
+
 set(LIBRARIES_FROM_REFERENCES ExampleProjectSharedLibrary ExampleProjectStaticLibrary)
 
 # Executable
@@ -59,4 +61,6 @@ install(EXPORT FindExampleProject
 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ExampleProject
 )
 
-add_subdirectory(test)
+if(EXAMPLEPROJECT_UNITTEST)
+	add_subdirectory(test)
+endif()
