@@ -115,7 +115,7 @@
           <Debug />
           <Deployment>
             <Mode>Auto</Mode>
-            <DeployIfNotSpecificallyReferenced>true</DeployIfNotSpecificallyReferenced>
+            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
             <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
           </Deployment>
           <RootVirtualSourceFolder>
